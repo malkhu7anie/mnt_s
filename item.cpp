@@ -5,7 +5,7 @@ bool is_type_valid(std::string t)
     return type_mp.find(t) != type_mp.end(); 
 }
 
-item::item(std::string n, std::string tp = "", std::string st = "")
+item::item(std::string n, std::string tp, std::string st)
     : item_name{n}, item_state{st}
 {
     if (is_type_valid(tp))
@@ -13,4 +13,7 @@ item::item(std::string n, std::string tp = "", std::string st = "")
 }
 
 std::string item::name() { return item_name; }
-std::string item_type() { return }
+std::string item::type() { return sv_mp[item_type]; }
+std::string item::state() { return item_state; }
+
+int item::cost() { return repair_cost; }

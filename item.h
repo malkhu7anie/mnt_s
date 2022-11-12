@@ -29,7 +29,7 @@ public:
 
     std::string name();
     std::string type();
-    std::string status();
+    std::string state();
 
     int cost();
 
